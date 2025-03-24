@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 const App = () => {
 
   return (
-    <main className=' flex flex-col min-h-screen bg-secondary font-montserrat text-gray-300'>
+    <main className='flex flex-col min-h-screen bg-secondary font-montserrat text-gray-300'>
       <Navbar />
       <Footer />
     </main>
