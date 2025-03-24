@@ -1,5 +1,5 @@
 import React from "react";
-import { MdDelete } from 'react-icons/md';
+import { MdDelete } from "react-icons/md";
 
 const Cart = ({ cart, removeFromCart }) => {
   const cost = (cart.quantity * cart.price).toFixed(2);
@@ -25,12 +25,12 @@ const Cart = ({ cart, removeFromCart }) => {
           </button>
         </div>
       </div>
-     <div className="col-span-1 flex items-center justify-between">
-      <p className="text-2xl font-bold">${cost}</p>
-      <button className="bg-red-500 p-3 rounded-lg">
-       <MdDelete className="text-2xl text-red-700 hover:text-red-900" />
-      </button>
-     </div>
+      <div className="col-span-1 flex items-center justify-between">
+        <p className="text-2xl font-bold">${cost}</p>
+        <button className="bg-red-500 p-3 rounded-lg">
+          <MdDelete className="text-2xl text-red-700 hover:text-red-900" />
+        </button>
+      </div>
     </div>
   );
 };
