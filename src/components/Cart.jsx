@@ -27,7 +27,7 @@ const Cart = ({ cart, removeFromCart }) => {
       </div>
       <div className="col-span-1 flex items-center justify-between">
         <p className="text-2xl font-bold">${cost}</p>
-        <button className="bg-red-500 p-3 rounded-lg">
+        <button onClick={() => removeFromCart(cart.id)} className="bg-red-500 p-3 rounded-lg">
           <MdDelete className="text-2xl text-red-700 hover:text-red-900" />
         </button>
       </div>
