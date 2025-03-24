@@ -33,7 +33,7 @@ const ProductDetail = () => {
           <h1 className="text-xl font-bold">{product.price}</h1>
           <p className="w-96">{product.description}</p>
           <ReviewStar rating={product.rating} />
-          <button className="rounded-full bg-primary hover:bg-primary/90 px-5 py-3 text-centr text-white">
+          <button className="rounded-full bg-primary hover:bg-primary/90 px-5 py-3 text-center text-white">
             Add to Cart
           </button>
         </div>
