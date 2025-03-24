@@ -2,8 +2,11 @@ import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useCartStore from "../store/useCartStore";
 
 const Navbar = () => {
+  const { carts } = useCartStore();
+
   const navItems = [
     {
       id: 0,
@@ -50,7 +53,7 @@ const Navbar = () => {
             <Link to={'/cart'}>
             <button className="relative">
              <FaShoppingCart className="text-2xl" />
-             <span className="absolute -top-3 -right-3 bg-primary text-white text-xs rounded-full w-5 h-5 flex justify-center items-center">0</span>
+             <span className="absolute -top-3 -right-3 bg-primary text-white text-xs rounded-full w-5 h-5 flex justify-center items-center">{carts.length}</span>
             </button>
             </Link>
           </div>
