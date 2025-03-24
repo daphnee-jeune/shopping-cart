@@ -47,10 +47,12 @@ const Navbar = () => {
             ))}
           </div>
           <div className="space-x-4">
+            <Link to={'/cart'}>
             <button className="relative">
              <FaShoppingCart className="text-2xl" />
              <span className="absolute -top-3 -right-3 bg-primary text-white text-xs rounded-full w-5 h-5 flex justify-center items-center">0</span>
             </button>
+            </Link>
           </div>
         </nav>
       </MaxWidthWrapper>
