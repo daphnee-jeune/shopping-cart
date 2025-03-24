@@ -1,10 +1,13 @@
 import 'react'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const App = () => {
 
   return (
     <main className=' flex flex-col min-h-screen bg-secondary font-montserrat text-gray-300'>
-      App
+      <Navbar />
+      <Footer />
     </main>
   )
 }
