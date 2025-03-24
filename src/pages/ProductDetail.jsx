@@ -24,7 +24,7 @@ const ProductDetail = () => {
   }
   return (
     <MaxWidthWrapper>
-      {product && <div className="grid grid-cols2 my-10">
+      {product && <div className="grid grid-cols2 my-10 mt-28">
         <div className="justify-center items-center flex">
           <img src={product.thumbnail} alt={product.description} className="h-96" />
         </div>

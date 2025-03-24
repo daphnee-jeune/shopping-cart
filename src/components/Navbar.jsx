@@ -1,6 +1,7 @@
 import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = [
@@ -30,7 +31,9 @@ const Navbar = () => {
       <MaxWidthWrapper>
         <nav className="flex items-center justify-between">
           <div className="">
-            <img src="Logo.png" alt="logo" className="h-16" />
+            <Link to={'/'}>
+              <img src="Logo.png" alt="logo" className="h-16" />
+            </Link>
           </div>
           <div className="space-x-8">
             {navItems.map((item) => (
