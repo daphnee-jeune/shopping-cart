@@ -4,10 +4,12 @@ import ReviewStar from "../components/ReviewStar";
 import { useParams } from "react-router-dom";
 import useProductStore from "../store/useProductStore";
 import Loading from "../components/Loading";
+import useCartStore from "../store/useCartStore";
 
 const ProductDetail = () => {
   const { productId } = useParams();
   const { product, loading, error, fetchProduct } = useProductStore();
+  const { addToCart } = useCartStore()
 
   useEffect(() => {
    fetchProduct(productId)
@@ -33,7 +35,7 @@ const ProductDetail = () => {
           <h1 className="text-xl font-bold">{product.price}</h1>
           <p className="w-96">{product.description}</p>
           <ReviewStar rating={product.rating} />
-          <button className="rounded-full bg-primary hover:bg-primary/90 px-5 py-3 text-center text-white">
+          <button onClick={() => addToCart(product)} className="rounded-full bg-primary hover:bg-primary/90 px-5 py-3 text-center text-white">
             Add to Cart
           </button>
         </div>
