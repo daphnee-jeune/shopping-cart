@@ -9,7 +9,6 @@ const CartSection = () => {
   return (
     <MaxWidthWrapper>
       <div className="flex flex-col gap-5 min-h-[30rem] my-5 mt-28">
-        <h1 className="text-xl ">My cart - </h1>
         {carts.length === 0 ? (
           <p className="text-lg text-center mt-20">Your cart is empty!</p>
         ) : (
