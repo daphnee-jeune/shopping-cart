@@ -4,7 +4,7 @@ import { MdDelete } from 'react-icons/md';
 const Cart = ({ cart, removeFromCart }) => {
   const cost = (cart.quantity * cart.price).toFixed(2);
   return (
-    <div className="my-5 border border-b-primary/30 border-transparent grid grid-cols p-3 items-center">
+    <div className="my-5 border border-b-primary/30 border-transparent grid grid-cols-6 p-3 items-center">
       <div className="col-span2">
         <div className="flex items-center gap-5">
           <img src={cart.thumbnail} alt="" className="h-20" />
