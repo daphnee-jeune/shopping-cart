@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
             className="object-cover object-center hover:scale-125 transition-all duration-300"
           />
           <h3 className="text-xl mt-5 font-bold text-primary">
-            {product.title}
+            {product.title}{" "}
           </h3>
         </div>
       </Link>

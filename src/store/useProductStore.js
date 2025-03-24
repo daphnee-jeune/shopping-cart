@@ -3,6 +3,7 @@ import { create } from "zustand";
 
 const useProductStore = create((set) => ({
   products: [],
+  product: null,
   loading: false,
   error: null,
 
@@ -14,6 +15,19 @@ const useProductStore = create((set) => ({
     } catch (err) {
       set({
         error: "An error occured while fetching the products",
+        loading: false,
+      });
+    }
+  },
+
+  fetchProduct: async (id) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await axios.get( `https://dummyjson.com/products/${id}`);
+      set({ product: response.data, loading: false });
+    } catch (err) {
+      set({
+        error: "An error occured while fetching this product",
         loading: false,
       });
     }
