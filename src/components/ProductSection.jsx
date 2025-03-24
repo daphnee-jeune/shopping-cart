@@ -1,17 +1,34 @@
-import React from 'react'
-import MaxWidthWrapper from './MaxWidthWrapper'
-import ProductCard from './ProductCard'
+import React, { useEffect } from "react";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import ProductCard from "./ProductCard";
+import useProductStore from "../store/useProductStore";
+import Loading from "./Loading";
 
 const ProductSection = () => {
+  const { products, loading, error, fetchProducts } = useProductStore();
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
+
+  if (loading) {
+    return <Loading />;
+  }
+  if (error) {
+    return (
+      <div className="text-center text-xl pt-20 text-red-500">{error}</div>
+    );
+  }
   return (
     <div>
       <MaxWidthWrapper>
-       <section className='grid grid-cols-3 gap-10 my-10 py-10'>
-        <ProductCard />
-       </section>
+        <section className="grid grid-cols-3 gap-10 my-10 py-10">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </section>
       </MaxWidthWrapper>
     </div>
-  )
-}
+  );
+};
 
-export default ProductSection
+export default ProductSection;
