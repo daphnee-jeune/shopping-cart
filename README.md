@@ -1,13 +1,7 @@
-# React + Vite
+# React + Vite + Tailwind CSS + Zustand
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple shopping cart built with the intent of exploring Zustand as a state management solution.
 
-Currently, two official plugins are available:
+It contains two stores: one responsible for handling the fetching of the products from 'https://dummyjson.com/products' and the other to handle and manage the actions around the cart (adding, removing products).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# shopping-cart
+I used React Router to implement the navigation betweeen the homepage and clicking on the individual products and the shopping cart.
