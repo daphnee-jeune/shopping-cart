@@ -5,7 +5,7 @@ const Cart = ({ cart, removeFromCart }) => {
   const cost = (cart.quantity * cart.price).toFixed(2);
   return (
     <div className="my-5 border border-b-primary/30 border-transparent grid grid-cols-6 p-3 items-center">
-      <div className="col-span2">
+      <div className="col-span-2">
         <div className="flex items-center gap-5">
           <img src={cart.thumbnail} alt="" className="h-20" />
           <p className="text 2xl font-bold">{cart.title}</p>
@@ -15,7 +15,7 @@ const Cart = ({ cart, removeFromCart }) => {
         <p className="text-2xl font-bold">${cart.price}</p>
       </div>
       <div className="col-span-2">
-        <div className="flex items-centerr justify-center gap-1">
+        <div className="flex items-center justify-center gap-1">
           <button className="bg-red-500 text-white px-5 py-3 font-bold rounded-lg">
             -
           </button>
