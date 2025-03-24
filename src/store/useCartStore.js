@@ -29,3 +29,5 @@ const useCartStore = create(
     { name: "cart-storage" }
   )
 );
+
+export default useCartStore;
