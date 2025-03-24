@@ -25,7 +25,7 @@ const CartSection = () => {
             </div>
             <div className="mt-auto flex isolate justify-between">
               <button
-                onClick={() => clearCart}
+                onClick={() => clearCart()}
                 className="mt-5 border border-red-500 px-5 py-2 rounded-lg text-red-500"
               >
                 Empty cart

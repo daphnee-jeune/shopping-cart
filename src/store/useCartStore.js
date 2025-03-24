@@ -24,7 +24,7 @@ const useCartStore = create(
           carts: state.carts.filter((item) => item.id !== id),
         })),
 
-      clearCart: () => set({ cart: [] }),
+      clearCart: () => set({ carts: [] }),
       increaseQuantity: (id) =>
         set((state) => ({
           carts: state.carts.map((item) =>
